@@ -17,7 +17,11 @@
 $(call inherit-product, device/xiaomi/santoni/full_santoni.mk)
 
 # Inherit some common Syberia stuff.
+<<<<<<< HEAD:lean_santoni.mk
 $(call inherit-product, vendor/lean/config/common.mk)
+=======
+$(call inherit-product, vendor/syberia/common.mk)
+>>>>>>> 140b7f7... santoni: Fix inherit:syberia_santoni.mk
 
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
