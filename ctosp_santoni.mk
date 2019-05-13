@@ -16,13 +16,15 @@
 
 $(call inherit-product, device/xiaomi/santoni/full_santoni.mk)
 
-# Inherit some common Dot stuff.
-$(call inherit-product, vendor/dot/config/common.mk)
+# Inherit some common CTOSP stuff.
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_GAPPS_ARCH := arm64
+$(call inherit-product, vendor/ctosp/config/common_full_phone.mk)
 
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4X
-PRODUCT_NAME := dot_santoni
+PRODUCT_NAME := ctosp_santoni
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
@@ -30,9 +32,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 TARGET_VENDOR_PRODUCT_NAME := santoni
 
-TARGET_BOOT_ANIMATION_RES := 720
-
-DOT_BUILD_TYPE := WOLF-EXCLUSIVE
+CUSTOM_BUILD_TYPE := OFFICIAL
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="santoni-user 7.1.2 N2G47H V9.5.10.0.NAMMIFD release-keys"
